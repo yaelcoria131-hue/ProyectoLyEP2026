@@ -45,7 +45,7 @@ const Login = () => {
       sector
     )
     if (!usuario) {
-     alert('Verifique los datos')
+      setErrores((prev) => ({ ...prev, credenciales: 'Verifique los datos' }))
       return
     }
     localStorage.setItem("role", usuario.sector)
@@ -79,9 +79,12 @@ const Login = () => {
         <p style={{ color: 'red', minHeight: '18px' }}>
           {errores.sector || ' '}
         </p>
+                {errores.credenciales && (
+          <p style={{ color: 'red' }}>{errores.credenciales}</p>
+        )}
         <button type="submit">Ingresar</button>
       </form>
     </div>
   )
 }
-export default Login
+export default Login 
