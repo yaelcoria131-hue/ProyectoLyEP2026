@@ -15,7 +15,7 @@ const Login = () => {
     const nuevosErrores = {}
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!email) {
-      nuevosErrores.email = 'El email es obligatorio'
+      nuevosErrores.email = 'El Email Es Obligatorio'
     } else if (!emailRegex.test(email)) {
       nuevosErrores.email = 'Email inválido'
     }
