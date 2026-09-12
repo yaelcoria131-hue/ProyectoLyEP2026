@@ -20,7 +20,7 @@ const Login = () => {
       nuevosErrores.email = 'Email inválido'
     }
     if (!password) {
-      nuevosErrores.password = 'La contraseña es obligatoria'
+      nuevosErrores.password = 'La Contraseña Es Obligatoria'
     } else {
       if (password.length < 8) {
         nuevosErrores.password = 'Mínimo 8 caracteres'
